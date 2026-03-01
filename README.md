@@ -4,16 +4,16 @@ A production-grade skill that transforms Codex into a **senior refactoring engin
 
 ## What makes this different
 
-| Feature | Typical "refactor" skills | This skill |
-|---|---|---|
-| **Process** | "Simplify this code" | 7-phase structured workflow with mandatory gates |
-| **Analysis** | Single vague pass | 3 parallel analysis dimensions with measurable thresholds |
-| **Safety** | Hope for the best | 5 Iron Laws + 10-item rationalization defense table |
-| **Prioritization** | Apply everything blindly | Confidence scoring (0-100) with decision gates |
-| **Verification** | None | Mandatory lint + typecheck + test gate before completion |
-| **Parallelism** | Sequential only | Adaptive scaling with multi-agent support (explorer + worker roles) |
-| **Scope** | Recent changes only | Files, directories, modules, or entire repo — with audit-only mode |
-| **Reporting** | None | Structured impact report with metrics and flagged future items |
+| Feature            | Typical "refactor" skills | This skill                                                          |
+| ------------------ | ------------------------- | ------------------------------------------------------------------- |
+| **Process**        | "Simplify this code"      | 7-phase structured workflow with mandatory gates                    |
+| **Analysis**       | Single vague pass         | 3 parallel analysis dimensions with measurable thresholds           |
+| **Safety**         | Hope for the best         | 5 Iron Laws + 10-item rationalization defense table                 |
+| **Prioritization** | Apply everything blindly  | Confidence scoring (0-100) with decision gates                      |
+| **Verification**   | None                      | Mandatory lint + typecheck + test gate before completion            |
+| **Parallelism**    | Sequential only           | Adaptive scaling with multi-agent support (explorer + worker roles) |
+| **Scope**          | Recent changes only       | Files, directories, modules, or entire repo — with audit-only mode  |
+| **Reporting**      | None                      | Structured impact report with metrics and flagged future items      |
 
 ## Quick start
 
@@ -21,13 +21,13 @@ A production-grade skill that transforms Codex into a **senior refactoring engin
 
 ```bash
 # Clone directly into your Codex skills directory
-git clone https://github.com/YOUR_USERNAME/codex-simplify-skill.git ~/.codex/skills/simplify
+git clone https://github.com/tavaresgmg/codex-simplify-skill.git ~/.codex/skills/simplify
 ```
 
 Or with the built-in installer inside Codex:
 
 ```
-$skill-installer install simplify from github.com/YOUR_USERNAME/codex-simplify-skill
+$skill-installer install simplify from github.com/tavaresgmg/codex-simplify-skill
 ```
 
 ### Enable skills (if not already)
@@ -58,10 +58,10 @@ Review and simplify src/modules/, use parallel agents
 
 ## Modes
 
-| Mode | Trigger | Behavior |
-|---|---|---|
-| **Refactor** (default) | `$simplify`, "simplify", "refactor", "clean up" | Find problems AND fix them |
-| **Audit** | "find problems", "audit", "scan", "what's wrong with" | Report only — zero edits |
+| Mode                   | Trigger                                               | Behavior                   |
+| ---------------------- | ----------------------------------------------------- | -------------------------- |
+| **Refactor** (default) | `$simplify`, "simplify", "refactor", "clean up"       | Find problems AND fix them |
+| **Audit**              | "find problems", "audit", "scan", "what's wrong with" | Report only — zero edits   |
 
 ## How it works
 
@@ -88,11 +88,11 @@ Phase 7: Impact Report
 
 The skill scales execution strategy based on scope:
 
-| Scope | Strategy |
-|---|---|
-| **1-5 files** | Single agent, sequential |
-| **6-20 files** | 3 `explorer` agents in parallel for analysis → single agent refactors |
-| **20+ files** | Explorers per module for analysis → `worker` agents per module for refactoring |
+| Scope          | Strategy                                                                       |
+| -------------- | ------------------------------------------------------------------------------ |
+| **1-5 files**  | Single agent, sequential                                                       |
+| **6-20 files** | 3 `explorer` agents in parallel for analysis → single agent refactors          |
+| **20+ files**  | Explorers per module for analysis → `worker` agents per module for refactoring |
 
 Requires `multi_agent = true` in config. Falls back to sequential with parallel tool calls when unavailable.
 
@@ -128,34 +128,37 @@ Following Codex's **progressive disclosure** pattern: SKILL.md stays lean (216 l
 ## Analysis dimensions
 
 ### Pass 1 — Structural Complexity
+
 Functions > 30 lines, nesting > 3 levels, cyclomatic complexity > 10, parameter lists > 4, mixed concerns
 
 ### Pass 2 — Code Smells & Anti-Patterns
+
 DRY violations (3+ identical blocks), dead code, magic values, feature envy, boolean params, temporal coupling
 
 ### Pass 3 — Convention & Consistency
+
 Project standard deviations, naming inconsistencies, import ordering, type annotation gaps, stale comments
 
 ## Refactoring catalog
 
 15+ techniques organized by risk level, each with concrete `diff` examples:
 
-| Risk | Examples |
-|---|---|
-| **Very Low** | Remove dead imports, remove dead variables, remove commented-out code |
-| **Low** | Extract constants, guard clauses, simplify booleans, replace nested ternaries |
-| **Medium** | Extract helper functions (rule of 3), inline single-use abstractions, options objects |
-| **High** | Change function signatures, move code between files, rename exports |
+| Risk         | Examples                                                                              |
+| ------------ | ------------------------------------------------------------------------------------- |
+| **Very Low** | Remove dead imports, remove dead variables, remove commented-out code                 |
+| **Low**      | Extract constants, guard clauses, simplify booleans, replace nested ternaries         |
+| **Medium**   | Extract helper functions (rule of 3), inline single-use abstractions, options objects |
+| **High**     | Change function signatures, move code between files, rename exports                   |
 
 ## Confidence scoring
 
 Every finding gets a score (0-100):
 
-| Score | Action |
-|---|---|
-| 0-25 | Skip — subjective preference |
-| 26-50 | Apply only if zero-risk |
-| 51-75 | Apply — clear improvement |
+| Score  | Action                                             |
+| ------ | -------------------------------------------------- |
+| 0-25   | Skip — subjective preference                       |
+| 26-50  | Apply only if zero-risk                            |
+| 51-75  | Apply — clear improvement                          |
 | 76-100 | Must fix — complexity bomb or convention violation |
 
 ## Requirements
